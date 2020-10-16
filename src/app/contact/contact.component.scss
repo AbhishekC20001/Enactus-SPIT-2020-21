@@ -1,0 +1,27 @@
+.full-width {
+    width: 95%
+}
+
+.half-width {
+    width: 45%
+}
+
+.form-size {
+    width: 75%
+}
+/** Overrides underline color **/
+::ng-deep .mat-form-field-underline, ::ng-deep .mat-form-field-ripple, ::ng-deep .mat-form-field-placeholder {
+  background-color: #FFD700 !important;
+  color: #FFD700;
+}
+
+:host ::ng-deep .custom-spinner circle{
+    stroke: #FFD700;
+}
+
+
+#map {
+           width: 100%;
+           height: 400px;
+           background-color: grey;
+         }

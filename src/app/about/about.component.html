@@ -1,0 +1,103 @@
+<div class="container"
+  fxLayout="column"
+  fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+        <h3>About Us</h3>
+        <hr>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <div fxLayout="column" fxLayout.gt-sm="row">
+      <div fxFlex="70">
+        <h2>Our History</h2>
+        <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
+        <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+      </div>
+      <div fxFlex="30">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+            <h2>Facts At a Glance</h2>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <dl>
+              <dt>Started</dt>
+              <dd>3 Feb. 2013</dd>
+              <dt>Major Stake Holder</dt>
+              <dd>HK Fine Foods Inc.</dd>
+              <dt>Last Year's Turnover</dt>
+              <dd>$1,250,375</dd>
+              <dt>Employees</dt>
+              <dd>40</dd>
+            </dl>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <mat-card>
+      <blockquote>
+        <h3>You better cut the pizza in four pieces because
+            I'm not hungry enough to eat six.</h3>
+        <footer>-- Yogi Berra,
+          <cite>The Wit and Wisdom of Yogi Berra,
+            P. Pepe, Diversion Books, 2014</cite>
+        </footer>
+      </blockquote>
+    </mat-card>
+  </div>
+
+
+  <div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px" *ngIf="leaders" >
+    <h2 class="paddingDedo">Our Team</h2>
+    <br>
+    <div class="contentF" fxLayout="row wrap" fxLayoutGap="40px grid" >
+        <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="33%"  >
+          <mat-card class="dashboard-card-content" appHighlight>
+            <mat-card-header>
+              <mat-card-title><h3>Faculty Advisor</h3></mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{BaseURL + l.image}}" alt={{l.name}}>
+            <mat-card-content>
+              <p class='font'>
+              <i>Dr. Rita Das </i>
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-icon-button class="btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+    </div>
+    <br>
+    <div class="content" fxLayout="row wrap" fxLayoutGap="40px grid" >
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let l of leaders" >
+          <mat-card class="dashboard-card-content" appHighlight>
+            <mat-card-header>
+              <mat-card-title><h3>{{l.designation}}</h3></mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{BaseURL + l.image}}" alt={{l.name}}>
+            <mat-card-content>
+              <p class='font'>
+              <i> {{l.name}}</i>
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-icon-button class="btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+    </div>
+
+
+ </div>
+
+</div>
