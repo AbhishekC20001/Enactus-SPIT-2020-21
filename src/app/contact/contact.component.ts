@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input, Inject, ElementRef ,AfterViewInit,} from '@angular/core';
+import { Component, OnInit, ViewChild, Input, Inject, ElementRef ,AfterViewInit} from '@angular/core';
 
 import { FeedbackService } from '../services/feedback.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -156,6 +156,9 @@ export class ContactComponent implements OnInit {
       contacttype: 'None',
       message: ''
     });
+    this.feedbackFormDirective.resetForm();
+    //https://github.com/prabeshb/Front-End-JavaScript-Frameworks-Angular/blob/master/src/app/contact/contact.component.html
+    //https://github.com/cuiziang/Front-End-JavaScript-Frameworks-Overview-Angular/blob/master/src/app/contact/contact.component.html
 
   }
 
