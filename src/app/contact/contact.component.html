@@ -81,7 +81,7 @@
       </p>
     </form>
     </div>
-  <div [hidden] = "!isLoading">
+  <div [hidden] = "!isLoading || isShowingResponse">
     <mat-spinner class="custom-spinner"></mat-spinner><h4>Loading . . . Please Wait</h4>
   </div>
   <div *ngIf = "isShowingResponse">

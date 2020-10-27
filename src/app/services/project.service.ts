@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Project } from '../shared/project';
+import { Product } from '../shared/product';
 //import { DISHES } from '../shared/dishes';
 
 import { delay } from 'rxjs/operators';
@@ -25,6 +26,16 @@ export class ProjectService {
 
     getProjects(): Observable<Project[]> {
       return this.http.get<Project[]>(baseURL + 'projects')
+        .pipe(catchError(this.processHTTPMsgService.handleError));
+    }
+
+    getBambooProducts(): Observable<Product[]> {
+      return this.http.get<Product[]>(baseURL + 'bamboo_products')
+        .pipe(catchError(this.processHTTPMsgService.handleError));
+    }
+
+    getCottonProducts(): Observable<Product[]> {
+      return this.http.get<Product[]>(baseURL + 'cotton_products')
         .pipe(catchError(this.processHTTPMsgService.handleError));
     }
 

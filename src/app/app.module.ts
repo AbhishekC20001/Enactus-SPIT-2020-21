@@ -37,6 +37,7 @@ import { ContactComponent } from './contact/contact.component';
 
 import { LeaderService } from './services/leader.service';
 import { ProjectService } from './services/project.service';
+import { HomeService } from './services/home.service';
 
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -48,6 +49,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
@@ -82,12 +84,14 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatTabsModule
   ],
   providers: [
     LeaderService,
     ProcessHTTPMsgService,
     ProjectService,
+    HomeService,
     {provide: 'BaseURL', useValue: baseURL}
   ],
   entryComponents: [

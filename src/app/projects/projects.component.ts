@@ -1,5 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
+
 import { Project } from '../shared/project';
+import { Product } from '../shared/product';
 
 
 import { ProjectService } from '../services/project.service';
@@ -23,6 +25,9 @@ export class ProjectsComponent implements OnInit {
   projects: Project[];
   errMess: string;
 
+  products1: Product[];
+  products2: Product[];
+
 
 
   constructor(private projectService: ProjectService,
@@ -31,6 +36,13 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     this.projectService.getProjects()
       .subscribe(projects => this.projects = projects,
+        errmess => this.errMess = <any>errmess);
+
+    this.projectService.getBambooProducts()
+      .subscribe(products => this.products1 = products,
+        errmess => this.errMess = <any>errmess);
+    this.projectService.getCottonProducts()
+      .subscribe(products => this.products2 = products,
         errmess => this.errMess = <any>errmess);
   }
 

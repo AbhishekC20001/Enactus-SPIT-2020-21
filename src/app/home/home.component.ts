@@ -1,8 +1,9 @@
-
+import { Params, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { Component, OnInit, Inject } from '@angular/core';
 
-import { Leader } from '../shared/leader';
-import { LeaderService } from '../services/leader.service';
+import { Home } from '../shared/home';
+import { HomeService } from '../services/home.service';
 
 
 import { flyInOut, expand } from '../animations/app.animation';
@@ -21,17 +22,22 @@ import { flyInOut, expand } from '../animations/app.animation';
 })
 export class HomeComponent implements OnInit {
 
-  leader: Leader;
-  leaderErrMess: string;
+
+  errMess: string;
+
+  homes: Home[];
 
   constructor(
-    private leaderservice: LeaderService,
+    private homeService: HomeService,
     @Inject('BaseURL') private BaseURL) { }
 
   ngOnInit() {
-    this.leaderservice.getFeaturedLeader()
-      .subscribe(leader => this.leader = leader,
-      errmess => this.leaderErrMess = <any>errmess);
+
+    this.homeService.getHomeContent()
+      .subscribe(homes => this.homes = homes,
+        errmess => this.errMess = <any>errmess);
+
+
   }
 
 }

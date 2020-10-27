@@ -4,22 +4,44 @@
 
   <div fxFlex>
     <div>
-      <h3>Menu</h3>
+      <span><h1>Project Prithvi</h1></span>
+
+      <hr>
+    </div>
+  </div>
+  <div fxFlex>
+    <p>
+    <mat-tab-group color="accent">
+    <mat-tab label="What is Project huguvyyyctr"> Content 1 </mat-tab>
+    <mat-tab label="huvygct5rdxedtrvytbubh"> Content 2 </mat-tab>
+    <mat-tab label="gvctfdrxrdctfhubu"> Content 3 </mat-tab>
+    </mat-tab-group>
+    </p>
+  </div>
+  <div fxFlex>
+    <div>
+      <h3>Our Eco-friendly Products</h3>
       <hr>
     </div>
   </div>
 
   <div fxFlex *ngIf="projects" [@expand]>
     <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let project of projects"  appHighlight>
-        <img height="200px" src="{{BaseURL + project.image}}" alt={{project.name}}>
+      <mat-grid-tile *ngFor="let product of products1"  appHighlight>
+        <img height="200px" src="{{BaseURL + product.image}}" alt={{product.name}}>
         <mat-grid-tile-footer>
-          <h1>{{project.name | uppercase}}</h1>
+          <h1>{{product.name | uppercase}}  : ${{product.price}}</h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+      <mat-grid-tile *ngFor="let product of products2"  appHighlight>
+        <img height="200px" src="{{BaseURL + product.image}}" alt={{product.name}}>
+        <mat-grid-tile-footer>
+          <h1>{{product.name | uppercase}}  : ${{product.price}}</h1>
         </mat-grid-tile-footer>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
-  <div [hidden]="projects || errMess">
+  <div [hidden]="products1 || errMess">
     <mat-spinner class="custom-spinner"></mat-spinner><h4>Loading . . . Please Wait</h4>
   </div>
   <div fxFlex *ngIf="errMess">

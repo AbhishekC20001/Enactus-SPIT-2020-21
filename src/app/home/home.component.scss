@@ -1,3 +1,62 @@
 :host ::ng-deep .custom-spinner circle{
     stroke: #FFD700;
 }
+
+.btn-linkedin{
+  color:#fff!important;background-color:#007bb6!important;
+
+}
+.content{
+  padding-left: 30px;
+  //background-color: #FFFFE0;
+  background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+
+
+}
+.contentF{
+  padding-left: 35%;
+  //background-color: #FFFFE0;
+  background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+
+
+}
+
+.grid-container {
+    margin: 20px;
+  }
+
+.paddingDedo{
+  padding-left: 45%;
+}
+.dashboard-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    max-width: 150px;
+    min-width: 150px;
+  }
+
+.dashboard-card-content {
+    justify-content: center;
+
+
+  }
+.container {
+  background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+}
+
+img{
+  height: 300px;
+  width: 269x;
+
+  }
+mat-card-actions{
+  padding-left: 45%;
+
+}
+.font{
+  font-size: 1.3em;
+  text-align: center;
+}
