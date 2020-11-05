@@ -4,11 +4,12 @@
      fxLayout.xs="column"
      fxLayoutAlign.gt-md="space-around center"
      fxLayoutGap="10px">
+     <div class="main-div">
 
      <div class="content" fxLayout="row wrap" fxLayoutGap="40px grid" >
-         <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let h of homes" >
+         <div fxFlex="32%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let h of homes" >
            <mat-card class="dashboard-card-content">
-             <mat-card-header>
+             <mat-card-header class="dashboard-card-content">
                <mat-card-title><h3>{{h.name}}</h3></mat-card-title>
              </mat-card-header>
              <img mat-card-image src="{{BaseURL + h.image}}" alt={{h.name}}>
@@ -17,16 +18,11 @@
                <i> {{h.content}}</i>
                </p>
              </mat-card-content>
-             
+
            </mat-card>
          </div>
      </div>
-
-
-
-
-
-
+     </div>
 
 
 </div>

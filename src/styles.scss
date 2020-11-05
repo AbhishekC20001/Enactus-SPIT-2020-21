@@ -55,3 +55,7 @@ $divider-color:        #BDBDBD;
     z-index: 1;
     transform: scale(1.01);
 }
+html, body {
+    margin: 0;
+    height: 100%;
+}

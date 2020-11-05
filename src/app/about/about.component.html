@@ -62,7 +62,7 @@
     <div class="contentF" fxLayout="row wrap" fxLayoutGap="40px grid" >
         <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="33%"  >
           <mat-card class="dashboard-card-content" appHighlight>
-            <mat-card-header>
+            <mat-card-header class="dashboard-card-content">
               <mat-card-title><h3>Faculty Advisor</h3></mat-card-title>
             </mat-card-header>
             <img mat-card-image src="{{BaseURL + l.image}}" alt={{l.name}}>
@@ -81,7 +81,7 @@
     <div class="content" fxLayout="row wrap" fxLayoutGap="40px grid" >
         <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let l of leaders" >
           <mat-card class="dashboard-card-content" appHighlight>
-            <mat-card-header>
+            <mat-card-header class="dashboard-card-content">
               <mat-card-title><h3>{{l.designation}}</h3></mat-card-title>
             </mat-card-header>
             <img mat-card-image src="{{BaseURL + l.image}}" alt={{l.name}}>

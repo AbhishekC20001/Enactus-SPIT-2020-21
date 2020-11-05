@@ -51,6 +51,11 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 import {MatTabsModule} from '@angular/material/tabs';
 
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -63,6 +68,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     HighlightDirective,
     ProjectsComponent,
     ComingSoonComponent,
+    SidenavListComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,7 +91,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     FormsModule,
     ReactiveFormsModule,
     MatSliderModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSidenavModule,
+    MatIconModule,
   ],
   providers: [
     LeaderService,
