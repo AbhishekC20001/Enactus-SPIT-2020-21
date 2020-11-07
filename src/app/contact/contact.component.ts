@@ -11,6 +11,7 @@ import { Feedback, ContactType } from '../shared/feedback';
 
 import { flyInOut, visibility, expand } from '../animations/app.animation';
 
+import { } from '@types/googlemaps';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -26,9 +27,11 @@ import { flyInOut, visibility, expand } from '../animations/app.animation';
   ]
 })
 export class ContactComponent implements OnInit {
+  latitude:number;
+  longitude:number;
 
+  iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 
-  //title = 'angular-gmap';
 
 
   feedbackForm: FormGroup;
@@ -42,10 +45,9 @@ export class ContactComponent implements OnInit {
   isShowingResponse: boolean;
 
 
-
   @ViewChild('fform') feedbackFormDirective;
-
-
+  @ViewChild('gmap') gmapElement: any;
+  map: google.maps.Map;
 
   formErrors = {
     'firstname': '',
@@ -87,6 +89,19 @@ export class ContactComponent implements OnInit {
    }
 
    ngOnInit() {
+     var mapProp = {
+       center: new google.maps.LatLng(19.1231776, 72.8339267),
+       zoom: 15,
+       mapTypeId: google.maps.MapTypeId.ROADMAP
+     };
+     var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(19.123992, 72.836484),
+               map: map,
+               title: 'Enactus S.P.I.T!',
+            });
+
+     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+     marker.setMap(this.map);
    }
 
   createForm() {
@@ -161,5 +176,8 @@ export class ContactComponent implements OnInit {
     //https://github.com/cuiziang/Front-End-JavaScript-Frameworks-Overview-Angular/blob/master/src/app/contact/contact.component.html
 
   }
+
+
+
 
 }
