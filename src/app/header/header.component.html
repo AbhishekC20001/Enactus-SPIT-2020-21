@@ -1,9 +1,9 @@
 
-<mat-toolbar color="warn" class="tool">
+<mat-toolbar color="accent" class="tool">
   <span><img src="/assets/images/logo.png" height=30 width=41></span>
 
 
-  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+  <div class="blackfont" fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
   <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>
   <a mat-button routerLink="/aboutus" routerLinkActive="active"><span class="fa fa-info fa-lg"></span> About</a>
   <a mat-button routerLink="/projects" routerLinkActive="active"><span class="fa fa-list fa-lg"></span> Projects</a>
@@ -40,11 +40,12 @@
 
   <div fxFlex fxFlex.gt-sm="50%">
     <h1>Enactus S.P.I.T</h1>
-    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations
-      will tickle your culinary senses!</p>
+    <p>We beleive investing in students who take <br><b class="yellowfont">EN</b> trepreneurial <br>
+    <b class="yellowfont">ACT</b> ion for others creates a better world for <br>
+    <b class="yellowfont">US</b> all.</p>
   </div>
   <div fxFlex fxFlex.gt-sm="20%">
-    <img src="/assets/images/logo1.png" alt="Logo">
+    <img src="{{BaseURL + 'images/logo2.png'}}" alt="Logo">
   </div>
   <div fxFlex></div>
 </div>

@@ -11,7 +11,7 @@ import { Feedback, ContactType } from '../shared/feedback';
 
 import { flyInOut, visibility, expand } from '../animations/app.animation';
 
-import { } from '@types/googlemaps';
+//import { } from '@types/googlemaps';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -96,7 +96,7 @@ export class ContactComponent implements OnInit {
      };
      var marker = new google.maps.Marker({
                position: new google.maps.LatLng(19.123992, 72.836484),
-               map: map,
+               //map: map,
                title: 'Enactus S.P.I.T!',
             });
 

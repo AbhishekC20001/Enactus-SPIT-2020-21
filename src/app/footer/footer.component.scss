@@ -10,7 +10,7 @@ $background-pale: #D1C4E9;
 
 .footer{
     //background-color: $background-pale;
-    background: linear-gradient(315deg, #fff000 0%, #ed008c 74%);
+    background-color: #FFBF00;
 
     @include zero-margin(20px, 0px);
 }
@@ -21,3 +21,4 @@ $background-pale: #D1C4E9;
 .btn-linkedin{color:#fff!important;background-color:#007bb6!important;}
 .btn-twitter{color:#fff!important;background-color:#55acee!important;}
 .btn-mail{color:#fff!important;background-color:#512DA8!important;}
+.btn-instagram{color:#fff!important;background-color:#d6249f!important;}

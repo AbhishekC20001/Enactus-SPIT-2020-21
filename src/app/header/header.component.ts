@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter,Inject } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { ComingSoonComponent } from '../coming-soon/coming-soon.component';
 
@@ -10,7 +10,8 @@ import { ComingSoonComponent } from '../coming-soon/coming-soon.component';
 export class HeaderComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+  @Inject('BaseURL') private BaseURL) { }
 
   ngOnInit() {
   }

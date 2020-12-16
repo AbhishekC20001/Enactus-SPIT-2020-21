@@ -11,7 +11,8 @@
 .content{
   padding-left: 30px;
   //background-color: #FFFFE0;
-  background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+  //background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+  background-color: #020001;
 
 
 }
@@ -46,7 +47,9 @@
 
   }
 .container {
-  background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+  //background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+  background-color: #020001;
+  color:floralwhite;
 }
 
 img{
@@ -61,4 +64,7 @@ mat-card-actions{
 .font{
   font-size: 1.3em;
   text-align: center;
+}
+.yellowKar{
+  background-color: #FFBF00;
 }

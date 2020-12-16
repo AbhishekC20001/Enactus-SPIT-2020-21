@@ -11,22 +11,22 @@ $background-pale: #D1C4E9;
 .jumbotron {
     @include zero-margin(70px,30px);
     //background: $background-light ;
-    background: linear-gradient(315deg, #ef5734 0%, #ffcc2f 74%);
+    background: #0B0C10;
     color:floralwhite;
     min-height: 150px;
 }
 .tool{
-
+ color: black;
 }
 .example-spacer {
   flex: 1 1 auto;
 }
 a {
     text-decoration: none;
-    color: white;
+    color: #020001;
 }
 a:hover, a:active{
-    color: lightgray;
+    color: #FFFFFF;
 }
 .navigation-items{
     list-style-type: none;
@@ -40,4 +40,11 @@ mat-toolbar{
     mat-toolbar{
         border-radius: 0px;
     }
+}
+
+.yellowfont{
+  color: #FFBF00;
+}
+.blackfont{
+  color: #020001;
 }
