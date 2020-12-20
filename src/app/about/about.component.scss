@@ -68,3 +68,7 @@ mat-card-actions{
 .yellowKar{
   background-color: #FFBF00;
 }
+
+:host ::ng-deep .custom-spinner circle{
+    stroke: #FFD700;
+}

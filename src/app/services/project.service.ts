@@ -24,10 +24,10 @@ export class ProjectService {
   constructor(private http: HttpClient,
     private processHTTPMsgService: ProcessHTTPMsgService) { }
 
-    getProjects(): Observable<Project[]> {
+    /*getProjects(): Observable<Project[]> {
       return this.http.get<Project[]>(baseURL + 'projects')
         .pipe(catchError(this.processHTTPMsgService.handleError));
-    }
+    }*/
 
     getBambooProducts(): Observable<Product[]> {
       return this.http.get<Product[]>(baseURL + 'bamboo_products')

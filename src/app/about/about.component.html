@@ -4,7 +4,7 @@
 
   <div fxFlex>
     <div>
-        <h3>About Us</h3>
+        <h1>About Us</h1>
         <hr>
     </div>
   </div>
@@ -12,8 +12,9 @@
   <div fxFlex>
     <div fxLayout="column" fxLayout.gt-sm="row">
       <div fxFlex="70">
-        <h2>Our History</h2>
-        <p>We work for the principle of social entrepreneurship to strengthen the people around us and the planet we live in; with regard to employability, environmental issues and development.</p>
+
+        <p>Enactus is an international non-profit organization of students present in over 1730 campuses, spread across 39 countries and has over 72,000 students as active members who make an impact in the community, not in the form of charity, but by using the positive power of entrepreneurship.</p>
+        <p>We work for the principle of social entrepreneurship to strengthen the people around us and the planet we live in, with regard to employability, environmental issues and development.</p>
         <p>We live and work to create a positive, long lasting impact.</p>
       </div>
       <div fxFlex="30">
@@ -25,7 +26,7 @@
           </mat-card-header>
           <mat-card-content>
             <dl>
-              <dd>Re-engineering society; one cause at a time.</dd>
+              <dd><b>Re-engineering society, one cause at a time.</b></dd>
               <dt>Industry</dt>
               <dd>Non-profit Organization Management</dd>
               <dt>Company size</dt>
@@ -46,12 +47,8 @@
   <div fxFlex>
     <mat-card class="yellowKar">
       <blockquote>
-        <h3>You better cut the pizza in four pieces because
-            I'm not hungry enough to eat six.</h3>
-        <footer>-- Yogi Berra,
-          <cite>The Wit and Wisdom of Yogi Berra,
-            P. Pepe, Diversion Books, 2014</cite>
-        </footer>
+        <h3>With a head for business and a heart for the world, we live our values of integrity, passion, innovation and collaboration.</h3>
+        
       </blockquote>
     </mat-card>
   </div>
@@ -64,9 +61,12 @@
     <br>
 
     <br>
+    <div [hidden]="leaders || leaderErrMess">
+      <mat-spinner class="custom-spinner"></mat-spinner><h4>Loading . . . Please Wait</h4>
+    </div>
     <div class="content" fxLayout="row wrap" fxLayoutGap="40px grid" >
         <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let l of leaders" >
-          <mat-card class="dashboard-card-content" appHighlight>
+          <mat-card class="dashboard-card-content" appHighlight @expand>
             <mat-card-header class="dashboard-card-content">
               <mat-card-title><h3>{{l.designation}}</h3></mat-card-title>
             </mat-card-header>

@@ -20,7 +20,9 @@
   </div>
   <div fxFlex fxLayout>
     <span class="flex-spacer"></span>
-    <button type="submit" mat-button class="background-primary text-floral-white">Buy Now</button>
+    <div class="alignRButton">
+    <a mat-button routerLinkActive="active" class="background-primary text-floral-white" href="https://forms.gle/Q3cBSStotd1e6myh9">Buy Now</a>
+    </div>
   </div>
 
 
@@ -31,18 +33,19 @@
     </div>
   </div>
 
-  <div fxFlex *ngIf="projects" [@expand]>
+  <div fxFlex *ngIf="products1" [@expand]>
     <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let product of products1"  appHighlight>
+      <mat-grid-tile *ngFor="let product of products1"  appHighlight @expand>
         <img height="200px" src="{{BaseURL + product.image}}" alt={{product.name}}>
         <mat-grid-tile-footer>
-          <h1>{{product.name | uppercase}}  : ${{product.price}}</h1>
+
+          <h1>#{{product.prod_id}}: {{product.name | uppercase}} - Rs.{{product.price}}/-</h1>
         </mat-grid-tile-footer>
       </mat-grid-tile>
       <mat-grid-tile *ngFor="let product of products2"  appHighlight>
         <img height="200px" src="{{BaseURL + product.image}}" alt={{product.name}}>
         <mat-grid-tile-footer>
-          <h1>{{product.name | uppercase}}  : ${{product.price}}</h1>
+          <h1>#{{product.prod_id}}: {{product.name | uppercase}} - Rs.{{product.price}}/-</h1>
         </mat-grid-tile-footer>
       </mat-grid-tile>
     </mat-grid-list>
@@ -54,9 +57,12 @@
     <h2>Error</h2>
     <h4>{{errMess}}</h4>
   </div>
-  <p>
-  <button type="submit" mat-button class="background-primary text-floral-white">Buy Now</button>
-  </p>
+
+    <div class="alignLButton">
+      <a mat-button class="background-primary text-floral-white" href="https://forms.gle/Q3cBSStotd1e6myh9">Buy Now</a>
+
+    </div>
+
 
 
 </div>

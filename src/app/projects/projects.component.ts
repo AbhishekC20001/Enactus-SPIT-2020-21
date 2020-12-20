@@ -34,9 +34,9 @@ export class ProjectsComponent implements OnInit {
   @Inject('BaseURL') private BaseURL) { }
 
   ngOnInit() {
-    this.projectService.getProjects()
+    /*this.projectService.getProjects()
       .subscribe(projects => this.projects = projects,
-        errmess => this.errMess = <any>errmess);
+        errmess => this.errMess = <any>errmess);*/
 
     this.projectService.getBambooProducts()
       .subscribe(products => this.products1 = products,

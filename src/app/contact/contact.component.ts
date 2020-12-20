@@ -27,10 +27,10 @@ import { flyInOut, visibility, expand } from '../animations/app.animation';
   ]
 })
 export class ContactComponent implements OnInit {
-  latitude:number;
-  longitude:number;
+  //latitude:number;
+  //longitude:number;
 
-  iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+  //iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 
 
 
@@ -46,8 +46,8 @@ export class ContactComponent implements OnInit {
 
 
   @ViewChild('fform') feedbackFormDirective;
-  @ViewChild('gmap') gmapElement: any;
-  map: google.maps.Map;
+  //@ViewChild('gmap') gmapElement: any;
+  //map: google.maps.Map;
 
   formErrors = {
     'firstname': '',
@@ -80,7 +80,7 @@ export class ContactComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private feedbackservice: FeedbackService,
       private route: ActivatedRoute,
-      private location: Location,
+      //private location: Location,
 
       @Inject('BaseURL') private BaseURL) {
     this.createForm();
@@ -89,7 +89,7 @@ export class ContactComponent implements OnInit {
    }
 
    ngOnInit() {
-     var mapProp = {
+     /*var mapProp = {
        center: new google.maps.LatLng(19.1231776, 72.8339267),
        zoom: 15,
        mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -101,7 +101,7 @@ export class ContactComponent implements OnInit {
             });
 
      this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
-     marker.setMap(this.map);
+     marker.setMap(this.map);  */
    }
 
   createForm() {

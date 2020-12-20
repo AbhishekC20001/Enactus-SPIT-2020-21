@@ -6,8 +6,12 @@
   color:#fff!important;background-color:#007bb6!important;
 
 }
+.bg{
+  background-color: #ffd54f;
+}
 .content{
   padding-left: 50px;
+  padding-right: 50px;
   background-color: #ffd54f;
   //background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
 
@@ -45,7 +49,10 @@
   }
 .container {
   //background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
-  background-color: #ffd54f;
+  margin: 20px;
+  display:flex;
+  //background-color: #ffd54f;
+
 }
 
 img{
