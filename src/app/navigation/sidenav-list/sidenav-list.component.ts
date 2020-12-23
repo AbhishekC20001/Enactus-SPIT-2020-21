@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { MatSidenav } from '@angular/material';
 @Component({
   selector: 'app-sidenav-list',
   templateUrl: './sidenav-list.component.html',
@@ -9,6 +10,9 @@ export class SidenavListComponent implements OnInit {
   constructor() { }
   ngOnInit() {
   }
+
+  //sidenav: Promise<boolean>;
+  public sidenav: MatSidenav;
   public onSidenavClose = () => {
     this.sidenavClose.emit();
   }

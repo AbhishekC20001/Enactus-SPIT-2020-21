@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
 
   //iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 
-
+  visibility = 'shown';
 
   feedbackForm: FormGroup;
   feedback: Feedback;
