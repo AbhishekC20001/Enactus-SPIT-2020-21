@@ -24,7 +24,7 @@
       "id": "0",
       "prod_id": "PB01(B)",
       "name": "Bamboo Toothbrush (Blue)",
-      "image": "images/PB01(B).jpg",
+      "image": "images/PB01(B).JPG",
       "price": "55",
       "description": ""
     },
@@ -32,7 +32,7 @@
       "id": "1",
       "prod_id": "PB01(G)",
       "name": "Bamboo Toothbrush (Green)",
-      "image": "images/PB01(G).jpg",
+      "image": "images/PB01(G).JPG",
       "price": "55",
       "description": ""
     },
@@ -40,7 +40,7 @@
       "id": "2",
       "prod_id": "PB01(R)",
       "name": "Bamboo Toothbrush (Red)",
-      "image": "images/PB01(R).jpg",
+      "image": "images/PB01(R).JPG",
       "price": "55",
       "description": ""
     },
@@ -174,7 +174,7 @@
     },
     {
       "id": "19",
-      "prod_id": "PB17.jpg",
+      "prod_id": "PB17",
       "name": "Bamboo Ball Pen",
       "image": "images/PB17.jpg",
       "price": "120",
